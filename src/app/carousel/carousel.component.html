@@ -1,0 +1,7 @@
+<ngb-carousel  [interval] =3000 [pauseOnHover]="false"  [showNavigationArrows]="true" >
+  <ng-template  ngbSlide *ngFor="let image of images">
+    <div >
+     <img src="{{image.name}}" [alt]="image.caption">
+    </div>
+  </ng-template>
+</ngb-carousel>

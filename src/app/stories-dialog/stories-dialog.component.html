@@ -1,0 +1,57 @@
+<div class="bg-grey col-sm-12 align-item-center my-5">
+
+    <form action="" (ngSubmit)="submitStoryForm()">
+      <!-- Form Elements  -->
+    <div class=" row mx-4 ">
+      <div class="col-sm-5 ">
+          <label class="form-label">Enter Story Name</label>
+          <input type="text" class="form-control"name="storyName"  [(ngModel)]="formData.storyName" >
+          <div class="text-danger" *ngIf="storyNameError">Story name required</div>
+      </div>
+    
+      <!-- <div class="col-sm-4">
+          <label class="form-label">Select Assignee Name</label>
+          <select class="form-select " aria-label="Default select example"  name="storyAssigneeName"  [(ngModel)]="formData.storyAssigneeName" (click)="fetchDataFromBackend()">
+            <option value="" selected> Select Assignee Name</option>
+            <option  *ngFor="let employee of employeesData" [value]="employee.storyAssigneeName">{{employee.storyAssigneeName}}</option>
+          </select>
+          <div class="text-danger" *ngIf="storyAssigneeNameError">storyAssigneeName required</div>
+      </div> -->
+     
+      <div class="col-sm-4">
+        <label class="form-label">Select Assignee Name</label>
+        <mat-select class="form-control"  name="storyAssigneeName" [(ngModel)]="formData.storyAssigneeName" (click)="fetchDataFromBackend()">
+          <mat-option *ngFor="let employee of employeesData" [value]="employee.firstName">
+            {{ employee.firstName }}
+          </mat-option>
+        </mat-select>
+        <div class="text-danger" *ngIf="storyAssigneeNameError">storyAssigneeName required</div>
+      </div>
+      
+       
+      
+    
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+        <div class="mb-3 mx-4">
+          <label class="form-label">Enter the Story Description</label>
+          <input type="form-text" class="form-control" name="storyDescription"  [(ngModel)]="formData.storyDescription">
+          <div class="text-danger" *ngIf="storyDescriptionError">storyDescription required</div>
+        </div>
+      <div class="mb-3 form-check mx-4">
+        <input type="checkbox" class="form-check-input" >
+        <label class="form-check-label" >Check me out</label>
+      </div>
+    <!-- for files & attachments -->
+      <div class="mb-3 mx-4 col-sm-4">
+        <label for="file" class="form-label">Upload File</label>
+        <input type="file" class="form-control" (change)="handleFileInput($event)" accept=".pdf,.jpg,.jpej,.png,.img" name="file" >
+        <div class="text-danger" *ngIf="fileError">File required</div>
+      </div>
+        <!-- Buttons  -->
+      <div class="container text-center ">
+          <button class="btn btn-primary rounded-pill mx-4" type="submit" id="submit "  >Submit</button>
+          <button class="btn btn-danger rounded-pill mx-4" type="button" (click)="closepopup()">Cancel</button>
+        </div>
+    </form>
+    </div>

@@ -1,0 +1,167 @@
+<!--Story board component main section-->
+<section style="background-color: #aff8f240;">
+    <!--story section-->
+
+
+    <div class="col-12">
+        <!-- Header Section -->
+
+        <div class="row justify-content-center">
+            <div class="col-2" style="border: 1px solid black;">
+                <p class="h3 mt-4 text-center">Stories</p>
+            </div>
+
+            <div class="col-5 row">
+                <div class="col-6" style="border: 1px solid black;">
+                    <p class="h3 mt-4 text-center">Tasks</p>
+                </div>
+                <div class="col-6" style="border: 1px solid black;">
+                    <p class="h3 mt-4 text-center">In Progress</p>
+                </div>
+            </div>
+
+            <div class="col-5 row">
+                <div class="col-6" style="border: 1px solid black;">
+                    <p class="h3 mt-4 text-center">Submit</p>
+                </div>
+                <div class="col-6" style="border: 1px solid black;">
+                    <p class="h3 mt-4 text-center">Accepcted</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Story Header Section -->
+    <div class="col-12 ">
+
+        <div class="row justify-content-center border-bottom ">
+            <!-- Stories Column -->
+
+            <div class="col-2" style="border:1px solid black;">
+
+
+                <div class="card col-sm-10 mx-auto my-4" style="background-color: #e86767; "
+                    *ngFor="let employee of employeesData">
+                    <div class="card-body">
+                        <div>
+
+                            <div class="rounded bg-grey broder text-white">
+                                <span>
+                                    <p class="h4 text-body-secondary"> {{ employee.storyName }} {{employee.storyId}}</p>
+                                </span>
+                                <p class="ms-2 text-body-secondary">{{ employee.storyDescription }}</p>
+                                <p class="text-sm-end text-body-secondary">{{ employee.storyAssigneeName }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <!-- task logic column-->
+            <div class="col-5 row">
+                <!-- Tasks Column -->
+                <div class="col-6" style="border: 1px solid black;">
+                    <!-- loop of task will be done here-->
+                   
+                    <div class="card col-sm-10 mx-auto my-4" style="background-color: #bb5e44;" *ngFor="let task of taskDataNone" >
+                        <div class="card-body" >
+
+                            <div class="rounded bg-grey broder text-white">
+                                <p class="h4 ms-2  text-body-secondary">{{task.taskName}} {{task.taskid}}</p>
+                                <p class=" text-body-secondary">{{task.description}}</p>
+                                <p class="text-sm-end text-body-secondary">{{task.assigneeName}}</p>
+                            </div>
+                           <div class="position-absolute bottom-0 end-0">
+                            <button class="btn-xs btn-info rounded-pill " type="button" (click)="transferToProgress(task,'taskDataNone'); inProgress(task)">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 15l-6 6-1.42-1.42L15.17 16H4V4h2v10h9.17l-3.59-3.58L13 9l6 6z"/></svg>
+                            </button>
+                           </div>
+                        </div>
+                       
+                    </div>
+                </div>
+
+
+                <!-- In Progress Column -->
+                <div class="col-6" style="border: 1px solid">
+                    
+                    <div class="card col-sm-10 mx-auto my-4" style="background-color: #b2b950;" *ngFor="let task of taskDataProgress"  >
+                        <div class="card-body">
+                           
+                            <div class="rounded bg-grey broder text-white">
+                                <p class="h4 ms-2  text-body-secondary">{{task.taskName}} {{task.taskid}}</p>
+                                <p class=" text-body-secondary">{{task.description}}</p>
+                                <p class="text-sm-end text-body-secondary">{{task.assigneeName}}</p>
+                            </div>
+                           <div class="position-absolute bottom-0 end-0">
+                            <button class="btn-xs btn-info rounded-pill " type="button"  (click)="transferToDone(task,'taskDataProgress');inProgress(task)">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 15l-6 6-1.42-1.42L15.17 16H4V4h2v10h9.17l-3.59-3.58L13 9l6 6z"/></svg>
+                            </button>
+                           
+
+                        </div>
+                    </div></div>
+                </div>
+            </div>
+            <!-- ANother cols -->
+            <div class="col-5 row">
+                <!-- Submit Column -->
+                <div class="col-6 " style="border: 1px solid">
+                    <!-- loop of task will be done here-->
+                   
+                    <div class="card col-sm-10 mx-auto my-4" style="background-color: #3eb7ab;" *ngFor="let task of taskDataDone" >
+                        <div class="card-body">
+                          
+                            <div class="rounded bg-grey broder text-white">
+                                <p class="h4 ms-2  text-body-secondary">{{task.taskName}} {{task.taskid}}</p>
+                                <p class=" text-body-secondary">{{task.description}}</p>
+                                <p class="text-sm-end text-body-secondary">{{task.assigneeName}}</p>
+                            </div>
+                           <div class="position-absolute bottom-0 end-0">
+                            <button class="btn-xs btn-info rounded-pill " type="button"  (click)="transferToAccepted(task,'taskDataDone');inProgress(task)">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 15l-6 6-1.42-1.42L15.17 16H4V4h2v10h9.17l-3.59-3.58L13 9l6 6z"/></svg>
+                            </button>
+                           </div>
+                           
+                        </div>
+                    </div>
+                </div>
+                <!-- Accepcted Column -->
+                <div class="col-6" style="border: 1px solid">
+                    
+                    <div class="card col-sm-10 mx-auto my-4" style="background-color: #478f3b;" *ngFor="let task of taskDataAccepted">
+                        <div class="card-body">
+                          
+                            <div class="rounded bg-grey broder text-white">
+                                <p class="h4 ms-2  text-body-secondary">{{task.taskName}} {{task.taskid}}</p>
+                                <p class=" text-body-secondary">{{task.description}}</p>
+                                <p class="text-sm-end text-body-secondary">{{task.assigneeName}}</p>
+                            </div>
+                           
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <button class=" col-8 btn btn-success text-sm-start ms-4 my-4 rounded-pill " type="button"
+                (click)="openDialogStory()">Add Story ➕</button>
+
+        </div>
+        <div class="col-2">
+            <button class=" col-8 btn btn-success text-sm-start ms-4 my-4 rounded-pill " type="button"
+            (click)="openDialogTask()">Add Task ➕</button>
+
+        </div>
+    </div>
+</section>

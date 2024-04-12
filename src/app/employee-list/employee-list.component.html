@@ -1,0 +1,44 @@
+<section class="container c-body">
+  <!--         
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Employee List</li>
+        </ol>
+      </nav> -->
+      <p class="h1 text-center emp-head">Employee List</p>
+    <br>
+    <br>
+        <!-- <div class=" bg-success text-white rounded text-center ">
+        <h2>Employee List</h2>
+        <h4>iSign Tech pvt limited</h4>
+        <hr>
+    </div> -->
+     <div class="row">
+      <div class="col-sm-4" *ngFor="let user of usersArray; let sr = index">
+       <div class="card box-shadow curve-card ">
+             <div class=" rounded bg-grey text-center broder" >
+          <!-- <div class="col-xs-4">
+            <fa-icon [icon]="faList"></fa-icon></div> -->
+            <div >
+              <br>
+              <img [src]="getImageUrl(user)" width="200px" height="200px" alt="">
+              <br>
+              <br>
+            </div>
+              <p class="text-center"> ID : {{user.employeeId}}    </p>
+          <p>Name : {{user.firstName}}  {{user.lastName}}</p>
+          <p>Email : {{user.email}}</p>
+          <p>Phone : {{user.mobileNumber}}</p>
+         
+          <button class="btn  btn-xs active "  (click)="onSubmit(user)"> View Task Details </button>
+         
+        </div>
+        <br>
+      </div>
+    <br>
+       </div>
+       <div> <router-outlet/></div>
+       <br>
+      </div>
+  </section>

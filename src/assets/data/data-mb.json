@@ -1,0 +1,82 @@
+[ 
+    {
+    "image" : "assets/emp-img/malli.jpg",
+    "id" : 1,
+    "name" : "Mallikarjun Gone",
+     "DOB" :"27-Sep-2000",
+     "DOJ" :"05-Feb-2024"
+    
+},
+{
+    "image" : "assets/emp-img/Mahesh.jpg",
+    "id" : 2,
+    "name" : "Mahesh Konamoni",
+     "DOB" :"31-Dec-1999",
+     "DOJ" :"05-Feb-2024"
+
+},
+{
+    "image" : "assets/emp-img/Rohith.jpg",
+    "id" : 3,
+    "name" : "Rohith Mamidala",
+     "DOB" :"2-Apr-2001",
+     "DOJ" :"05-Feb-2024"
+
+},
+{
+    "image" : "assets/emp-img/udhay.jpg",
+    "id" : 4,
+    "name" : "Udhay Kumar Reddy Medam",
+     "DOB" :"06-Jan-2001",
+     "DOJ" :"05-Feb-2024"
+
+},
+{
+    "image" : "assets/emp-img/mithilesh.png",
+    "id" : 5,
+    "name" : "Mithilesh Bidkar ",
+     "DOB" :"1-Mar-1999",
+     "DOJ" :"05-Feb-2024"
+
+},
+{
+    "image" : "assets/emp-img/Pavan.jpg",
+    "id" : 6,
+    "name" : "PavanKumar Boora",
+     "DOB" :"9-Feb-2000",
+     "DOJ" :"05-Feb-2024"
+
+},
+{
+    "image" : "assets/emp-img/Siva.jpg",
+    "id" : 7,
+    "name" : "Kamuju Siva Kumar",
+     "DOB" :"24-Jun-1999",
+     "DOJ" :"05-Feb-2024"
+
+},
+{
+    "image" : "assets/emp-img/RatnaSagar.jpg",
+    "id" : 8,
+    "name" : "Ratna Sagar Jammalamadugu",
+     "DOB" :"20-Jun-1999",
+     "DOJ" :"05-Feb-2024"
+
+},
+{
+    "image" : "assets/emp-img/charan.jpg",
+    "id" : 9,
+    "name" : "Charan Kuramana",
+     "DOB" :"25-Apr-2001",
+     "DOJ" :"05-Feb-2024"
+
+},
+{
+    "image" : "assets/emp-img/shubham.jpg",
+    "id" : 10,
+    "name" : "Shubham Ghule",
+     "DOB" :"28-Apr-1999",
+     "DOJ" :"05-Feb-2024"
+
+}
+]

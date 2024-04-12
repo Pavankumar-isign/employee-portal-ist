@@ -1,0 +1,33 @@
+<header class="col-sm-12 d-flex" id="bg-color">
+    <!-- logo -->
+    <div class="d-flex col-sm-9 navbar">
+        <a href="https://isigntech.com/" target="_blank">
+            <img src="/assets/images/companylogo.jpeg" id="logo"></a>
+    </div>
+
+    <!-- login -->
+    <div *ngIf="dataservice.login" class="d-flex navbar col-sm-3">
+        <button class="cta" [routerLink]="['/app-login-form']" (click)="toggleLogin()">
+            <span>LOGIN</span>
+        </button>
+    </div>
+
+    <!-- dropdown -->
+    <div class="navbar" *ngIf="!dataservice.login && dataservice.logo">
+        <div  ngbDropdown class="position-relative d-block" >
+            <!--charan changes-->
+            <button type="button" *ngIf="dataservice.logout"  class="btn btn-outline-success" id="dropdownBasic1"
+                ngbDropdownToggle>
+            </button>
+            <div *ngIf="dataservice.userRes">
+            <img [src]="getImageUrl(dataservice.userRes)" width="70px" height="70px" alt="">
+            <p>{{dataservice.userRes.email}}</p>
+        </div>
+        <!--charan changes-->
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="menu">
+                <button ngbDropdownItem [routerLink]="['/app-sprint-table']">Sprint Board</button>
+                <button ngbDropdownItem (click)="toggleLogout()">Logout</button>
+            </div>
+        </div>
+    </div>
+</header>

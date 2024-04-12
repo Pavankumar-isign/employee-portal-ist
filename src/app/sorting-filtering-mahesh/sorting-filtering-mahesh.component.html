@@ -1,0 +1,174 @@
+   
+<div class="carousel m-3">
+  <img [src]="images[currentIndex]" class="d-block w-100 rounded" width="100%" height="400" alt="Slide {{currentIndex + 1}}">
+  <button class="carousel-control-prev" (click)="prevSlide()">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" (click)="nextSlide()">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+  
+  <div class=" container d-flex  sorting">
+
+    
+ <div class="container col-sm-2 side-bar">
+     <span><b>PRICE</b></span>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" (click)="sort1('price')">
+        <label class="form-check-label" for="flexCheckDefault">
+       Less than 2000 Rs  
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" (click)="sort('id')">
+        <label class="form-check-label" for="flexCheckDefault">
+         Sort by Id
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" (click)="sort('price')">
+        <label class="form-check-label" for="flexCheckDefault">
+        
+         500 to 1000 Rs
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" (click)="sortByName('asc')">
+        <label class="form-check-label" for="flexCheckDefault">
+        
+        Sort By Name(A-Z)
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" (click)="sortByName('desc')">
+        <label class="form-check-label" for="flexCheckDefault">
+        
+        Sort By Name(Z-A)
+        </label>
+      </div>
+     
+      <hr>
+
+    <ul>
+      <span><b>Name</b></span>
+      <li><input type="checkbox">Arrow(3440)</li>
+      <li><input type="checkbox">RoadSter(3440)</li>
+      <li><input type="checkbox">Parex(3440)</li>
+      <li><input type="checkbox">Here&Now(3440)</li>
+      <li><input type="checkbox">+516 More</li>
+
+     
+      
+    </ul>    
+    <hr>
+
+    <div class="container col-sm-2 side-bar">
+      <!-- <span>Filter by Color:</span> -->
+      <div class="form-check form-check-inline" *ngFor="let color of getUniqueColors()">
+          <input class="form-check-input" type="checkbox" (change)="toggleColor(color)" [id]="color" />
+          <label class="form-check-label" [for]="color">{{ color }}</label>
+      </div>
+  </div>
+
+    
+  </div>
+
+
+
+
+<div class="container ">
+  <div class="row  d-flex  flex-sm-row data">
+
+    <!--  Sorting Buttons -->
+    <div class="col-md-12 text-right mb-3">
+      
+
+      <select (change)="sortSelection($event.target.value)">
+      
+      
+        <option value="id"class=" " >Sort By ID</option>
+        <option value="priceAsc" class=" " >Low to High</option>
+        <option value="priceDesc"  class=" ">High to Low</option>
+        <option value="nameAsc" class=" "  >Sort by Name (A-Z)</option>
+        <option value="nameDesc" class=" "  >Sort by Name (Z-A)</option>
+      </select>
+
+    </div>
+
+   
+
+
+    <!-- Filtering Input -->
+  
+     
+
+   
+    <!-- display data -->
+    <!-- <div class="col-md-3" *ngFor="let user of userInfo ">
+      <div class="card text-center ">
+        <div class="card-body">
+          <p> <img src="{{user.image}}" width="30%" height="30%" /> </p>
+          <p> ID : {{user.id}} </p>
+          <p> Name : {{user.name}} </p>
+          <p> colour : {{user.colour}} </p>
+          <p> price : {{user.price}} </p>
+        </div>
+      </div>
+    </div> -->
+
+
+
+
+     <!-- checkboxs -->
+   
+
+
+   <!-- display data -->
+   <ng-container *ngIf="showOutput">
+      <div class="col-md-3 mt-3" *ngFor="let user of userInfo">
+        <div class="card text-center ">
+          <div class="card-body">
+            <p> <img src="{{user.image}}" width="30%" height="30%" />  </p>
+            <p> ID : {{user.id}}    </p>
+            <p> Name : {{user.name}} </p>
+            <p> colour : {{user.colour}} </p>
+            <p> price : {{user.price}} </p>
+          </div>
+        </div>
+      </div>
+      </ng-container>
+      <div class="col-md-3" *ngFor="let user of filteredItems">
+        <div class="card text-center ">
+          <div class="card-body">
+            <p> <img src="{{user.image}}" width="30%" height="30%" />  </p>
+            <p> ID : {{user.id}}    </p>
+            <p> Name : {{user.name}} </p>
+            <p> colour : {{user.colour}} </p>
+            <p> price : {{user.price}} </p>
+          </div>
+        </div>
+      </div>
+
+</div>
+
+
+
+
+
+
+
+  </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,34 @@
+<div class="row  d-flex flex-sm-row" >
+        <!--  Sorting Buttons -->
+        <div class="col-md-12 text-right mb-3">
+            <button class="btn btn-primary mr-2" (click)="sort('id')">Sort by ID div</button>
+
+            <button class="btn btn-primary" (click)="sort('price')">Sort by Price(Low to High)</button>
+            <button class="btn btn-primary" (click)="sort1('price')">Sort by Price (High to Low)</button>
+            <button class="btn btn-primary mr-2" (click)="sortByName('asc')">Sort by Name (A-Z)</button>
+            <button class="btn btn-primary" (click)="sortByName('desc')">Sort by Name (Z-A)</button>
+
+          </div>
+                  <!-- Filtering Input -->
+    <div class="row mb-3">
+        <div class="col-md-12">
+            <input type="text" class="form-control" placeholder="Filter by Name" [(ngModel)]="filterValue" (input)="applyFilter()">
+            <input type="submit" value="submit" (*ngsubmit) = "applyFilter()" />
+        </div>
+    </div>
+
+   <!-- display data -->
+      <div class="col-md-3" *ngFor="let user of userInfo | filter : filterValue">
+        <div class="card text-center ">
+          <div class="card-body">
+            <p> <img src="{{user.image}}" width="30%" height="30%" />  </p>
+            <p> ID : {{user.id}}    </p>
+            <p> Name : {{user.name}} </p>
+            <p> colour : {{user.color}} </p>
+            <p> price : {{user.price}} </p>
+          </div>
+        </div>
+      </div>
+
+
+</div>

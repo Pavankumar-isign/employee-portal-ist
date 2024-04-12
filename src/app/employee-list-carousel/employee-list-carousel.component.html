@@ -1,0 +1,31 @@
+<div class="col-sm-12 d-flex my-3">
+
+    <!-- Congratulations -->
+    <div class="col-sm-3">
+        <div class="card">
+            <p class="card-title fst-italic">Congratulations...</p>
+            <marquee class="small-desc fw-bold fst-italic mb-1">Outstanding employee of the month!</marquee>
+            <div class="img"><img src="../assets/emp-img/udhay.jpg" class="pic rounded shadow"></div>
+            <div class="card-info pt-3">
+            </div>
+            <hr>
+            <p class="mb-0 fw-bold text-danger-emphasis fst-italic">{{ employeeOfTheMonth.name }}</p>
+            <small class="text-muted m-auto fst-italic">{{ employeeOfTheMonth.department }}</small>
+            <div class="go-corner">
+                <div class="go-arrow">☆</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-9 d-flex" id="cards-container">
+        <div class="card" *ngFor="let card of cardsData">
+            <div class="go-corner">
+                <div class="go-arrow">{{ card.id }}</div>
+            </div>
+            <div class="img">
+                <img [src]="card.image" alt="Person Image">
+                <p class="fw-bold m-1 justify-content-center">{{ card.name }}</p>
+            </div>
+           
+        </div>
+    </div>

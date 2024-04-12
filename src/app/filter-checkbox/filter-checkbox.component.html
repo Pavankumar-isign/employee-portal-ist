@@ -1,0 +1,105 @@
+
+<div class="container col-sm-12 d-flex flex-column justify-content-center mb-5">
+
+    <div class="container d-flex justify-content-center mb-5">
+        <div class="card">
+            <div class="card-body d-flex align-items-center">
+              
+              <!-- Checkboxes for product options -->
+              <div class="form-check mx-3">
+                <input class="form-check-input" type="radio" checked name="1" id="option1" (click)="onCheckboxChange(1)" routerLinkActive="active">
+                <label class="form-check-label" for="option1">
+                    Pavan
+                </label>
+              </div>
+        
+              <div class="form-check mx-3">
+                <input class="form-check-input" type="radio" (click)="onCheckboxChange(2)" name="1" id="option2">
+                <label class="form-check-label" for="option2">
+                 Rohith
+                </label>
+              </div>
+        
+              <div class="form-check mx-3">
+                <input class="form-check-input" type="radio" (click)="onCheckboxChange(3)" name="1" id="option3">
+                <label class="form-check-label" for="option3">
+                  Shubham
+                </label>
+              </div>
+
+              <div class="form-check mx-3">
+                <input class="form-check-input" type="radio" (click)="onCheckboxChange(4)" id="option4" name="1">
+                <label class="form-check-label" for="option4">
+                  Mithilesh
+                </label>
+              </div>
+
+              <div class="form-check mx-3">
+                <input class="form-check-input" type="radio" (click)="onCheckboxChange(5)" id="option5" name="1">
+                <label class="form-check-label" for="option5">
+                  Charan
+                </label>
+              </div>
+              <div class="form-check mx-3">
+                <input class="form-check-input" type="radio" (click)="onCheckboxChange(6)" id="option6" name="1">
+                <label class="form-check-label" for="option6">
+                  Udhay
+                </label>
+              </div>
+              <div class="form-check mx-3">
+                <input class="form-check-input" type="radio" (click)="onCheckboxChange(7)" id="option7" name="1">
+                <label class="form-check-label" for="option7">
+                  Ratnasagar
+                </label>
+              </div>
+              <div class="form-check mx-3">
+                <input class="form-check-input" type="radio" (click)="onCheckboxChange(8)" id="option8" name="1">
+                <label class="form-check-label" for="option8">
+                  Mallikarjun
+                </label>
+              </div>
+              <div class="form-check mx-3">
+                <input class="form-check-input" type="radio" (click)="onCheckboxChange(9)" id="option9" name="1">
+                <label class="form-check-label" for="option9">
+                  Mahesh
+                </label>
+              </div>
+              <div class="form-check mx-3">
+                <input class="form-check-input" type="radio" (click)="onCheckboxChange(10)" id="option10" name="1">
+                <label class="form-check-label" for="option10">
+                  Siva
+                </label>
+              </div>
+        
+             
+             
+            </div>
+          </div>        
+    </div>
+
+
+    <!-- component will show in this container -->
+        
+        <div class="col-sm-12">
+            <app-sort-filter-pavan *ngIf="checkboxes[0]"></app-sort-filter-pavan>
+            
+            <app-sort-filter-rohit  *ngIf="checkboxes[1]"></app-sort-filter-rohit>
+            <app-sort-search-shubam  *ngIf="checkboxes[2]"></app-sort-search-shubam>
+            <div class="border border-dark mb-3" *ngIf="checkboxes[3]">
+                <app-sf-comp ></app-sf-comp>
+            </div>
+
+            <app-sf-charan *ngIf="checkboxes[4]"></app-sf-charan>
+
+            <app-sf-udhay *ngIf="checkboxes[5]"></app-sf-udhay>
+               
+            <app-sort-sagar *ngIf="checkboxes[6]"></app-sort-sagar>
+
+            <app-sfc-component *ngIf="checkboxes[7]"></app-sfc-component>
+
+            <app-sorting-filtering-mahesh *ngIf="checkboxes[8]"></app-sorting-filtering-mahesh>
+            <app-sort-siva *ngIf="checkboxes[9]"></app-sort-siva>
+        
+        </div>
+</div>
+

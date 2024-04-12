@@ -1,0 +1,31 @@
+<section class="container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#" routerLink="/app-admin-home">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><a routerLink="/app-employee-list">Employee List</a></li>
+    </ol>
+  </nav>
+
+  <div class=" bg-success text-white rounded " *ngFor="let user of usersArray; let sr = index">
+    <div class="card box-shadow">
+
+      <div class="card-body rounded bg-grey text-center">
+
+        <!-- <img class="card-img-top tasks-img" [src]="getImageUrl(employee)" alt="Your Task img"> -->
+        <embed [src]="getPdfUrl(user)" type="application/pdf" width="100%" height="600px">
+        <hr>
+        <p class="card-text">
+          {{user.additionalMessage}}
+        </p>
+        <a href="#" class="btn btn-primary">Download </a>
+        <br>
+        <p class="h4">
+          {{user.conditionalMessage}}
+        </p>
+      </div>
+      <br>
+    </div>
+  </div>
+
+  <hr>
+</section>

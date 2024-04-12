@@ -1,0 +1,52 @@
+[
+    {
+        "image": "/assets/images/mallikarjun.JPG",
+        "name": "Mallikarjun",
+        "id": "1"
+    },
+    {
+        "image": "/assets/images/mahesh.jpg",
+        "name": "Mahesh",
+        "id": "2"
+    },
+    {
+        "image": "/assets/images/Rohith.jpg",
+        "name": "Rohith",
+        "id": "3"
+    },
+    {
+        "image": "/assets/images/udhay.jpg",
+        "name": "Udhay",
+        "id": "4"
+    },
+    {
+        "image": "/assets/images/mithilesh.png",
+        "name": "Mithilesh",
+        "id": "5"
+    },
+    {
+        "image": "/assets/images/pavan.jpg",
+        "name": "Pavan",
+        "id": "6"
+    },
+    {
+        "image": "/assets/images/siva.JPG",
+       "name": "Siva",
+       "id": "7"
+    },
+    {
+        "image": "/assets/images/sagar.jpg",
+        "name": "Sagar",
+        "id": "8"
+    },
+    {
+        "image": "/assets/images/charan.JPEG",
+        "name": "Charan",
+        "id": "9"
+    },
+    {
+        "image": "/assets/images/shubham.jpg",
+        "name": "Subham",
+        "id": "10"
+    }
+]

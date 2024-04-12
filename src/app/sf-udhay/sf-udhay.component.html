@@ -1,0 +1,209 @@
+<div class="container col-sm-12 pt-2">
+    <div class="row d-flex align-items-center justify-content-end">
+
+        <div class="col-sm-3 d-flex align-items-center gap-1">
+            <input class="border rounded-pill fs-6 p-2" type="text" name="" placeholder="Hi! Search Buddy...">
+            <i class="fa-solid fa-magnifying-glass text-dark fs-5"></i>
+        </div>
+
+        <div class="col-md-2">
+            <div class="col-md-12">
+                <select class="form-control bg-secondary text-white" (change)="sortSelection($event.target.value)">
+                    <option value="id">Sort By</option>
+                    <option value="priceAsc">Price - Low to High</option>
+                    <option value="priceDesc">Price - High to Low</option>
+                    <option value="nameAsc">Name - A-Z</option>
+                    <option value="nameDesc">Name - Z-A</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Left section content -->
+<!-- Sort Name -->
+<div class="container mt-3 d-flex">
+    <div class="bg-color rounded pt-2">
+        <div class="row text-secondary">
+            <div class="col-sm-12 left-section">
+                <div class="d-flex gap-1">
+                    <h6>Brand</h6>
+                    <i class="fa-solid fa-shirt" id="icon"></i>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input border border-primary" type="checkbox" id="checkbox1">
+                    <label class="form-check-label" for="checkbox1">Metronaut (2144)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input border border-primary" type="checkbox" id="checkbox1">
+                    <label class="form-check-label" for="checkbox2">Roadster (1912)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input border border-primary" type="checkbox" id="checkbox1">
+                    <label class="form-check-label" for="checkbox3">Martin (1696)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input border border-primary" type="checkbox" id="checkbox1">
+                    <label class="form-check-label" for="checkbox3">Vtexx (1642)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input border border-primary" type="checkbox" id="checkbox1">
+                    <label class="form-check-label" for="checkbox3">Vellical (142)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input border border-primary" type="checkbox" id="checkbox1">
+                    <label class="form-check-label" for="checkbox3">Calvin (1042)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input border border-primary" type="checkbox" id="checkbox1">
+                    <label class="form-check-label" for="checkbox3">Arrow (1642)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input border border-primary" type="checkbox" id="checkbox1">
+                    <label class="form-check-label" for="checkbox3">Tommy (42)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input border border-primary" type="checkbox" id="checkbox1">
+                    <label class="form-check-label" for="checkbox3">Pepe Jeans (12)</label>
+                </div>
+                <h6 class="text-danger ms-3 pt-1 pb-2">+516 more...</h6>
+                <hr class="line">
+            </div>
+
+
+            <!-- Sort Price -->
+            <div class="row">
+                <div class="col-sm-12 left-section">
+                    <h6>Price</h6>
+                    <div class="form-check">
+                        <input class="form-check-input border border-primary" type="checkbox" id="checkbox1">
+                        <label class="form-check-label" for="checkbox1">₹ 500 to 1000 (98270)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input border border-primary" type="checkbox" id="checkbox1">
+                        <label class="form-check-label" for="checkbox2">₹ 1001 to 2000 (542)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input border border-primary" type="checkbox" id="checkbox1">
+                        <label class="form-check-label" for="checkbox3">₹ >2001 (41)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input border border-primary" type="checkbox" id="checkbox1">
+                        <label class="form-check-label" for="checkbox3">less than ₹ 500 (28)</label>
+                    </div>
+                    <hr class="line">
+                </div>
+            </div>
+
+            <!-- Sort Color -->
+            <div class="row">
+                <div class="col-sm-12 left-section">
+                    <h6>color</h6>
+                    <div class="form-check">
+                        <input class="form-check-input border border-primary" type="checkbox" id="checkbox1">
+                        <div class="color-selector">
+                            <div class="color-option" style="background-color: blue;"></div>
+                            <label class="form-check-label" for="checkbox1">Blue</label>
+                        </div>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input border border-primary" type="checkbox" id="checkbox1">
+                        <div class="color-selector">
+                            <div class="color-option border" style="background-color: white;"></div>
+                            <label class="form-check-label" for="checkbox1">White</label>
+                        </div>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input border border-primary" type="checkbox" id="checkbox1">
+                        <div class="color-selector">
+                            <div class="color-option" style="background-color:navy;"></div>
+                            <label class="form-check-label" for="checkbox1">Navy Blue</label>
+                        </div>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input border border-primary" type="checkbox" id="checkbox1">
+                        <div class="color-selector">
+                            <div class="color-option" style="background-color:green;"></div>
+                            <label class="form-check-label" for="checkbox1">Green</label>
+                        </div>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input border border-primary" type="checkbox" id="checkbox1">
+                        <div class="color-selector">
+                            <div class="color-option" style="background-color:black;"></div>
+                            <label class="form-check-label" for="checkbox1">Black</label>
+                        </div>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input border border-primary" type="checkbox" id="checkbox1">
+                        <div class="color-selector">
+                            <div class="color-option" style="background-color:grey;"></div>
+                            <label class="form-check-label" for="checkbox1">Grey</label>
+                        </div>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input border border-primary" type="checkbox" id="checkbox1">
+                        <div class="color-selector">
+                            <div class="color-option" style="background-color:red;"></div>
+                            <label class="form-check-label" for="checkbox1">Red</label>
+                        </div>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input border border-primary" type="checkbox" id="checkbox1">
+                        <div class="color-selector">
+                            <div class="color-option" style="background-color:violet;"></div>
+                            <label class="form-check-label" for="checkbox1">Voilet</label>
+                        </div>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input border border-primary" type="checkbox" id="checkbox1">
+                        <div class="color-selector">
+                            <div class="color-option" style="background-color:yellow;"></div>
+                            <label class="form-check-label" for="checkbox1">Yellow</label>
+                        </div>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input border border-primary" type="checkbox" id="checkbox1">
+                        <div class="color-selector">
+                            <div class="color-option" style="background-color:brown;"></div>
+                            <label class="form-check-label" for="checkbox1">Brown</label>
+                        </div>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input border border-primary" type="checkbox" id="checkbox1">
+                        <div class="color-selector">
+                            <div class="color-option" style="background-color:pink;"></div>
+                            <label class="form-check-label" for="checkbox1">Pink</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+    </div>
+
+
+    <!-- Right section content -->
+    <!-- Cards-lists -->
+    <div class="row ms-5">
+        <div class="bg-color-2 rounded p-1 ">
+            <div class="col-sm-12 d-flex flex-wrap gap-3 p-auto justify-content-center align-items-center ">
+                <div *ngFor="let user of userInfo">
+                    <div class="card bg-dark" id="cards">
+                        <div class="card-body text-center text-white pt-2 text-uppercase">
+                            <img src="{{user.image}}" class="card-img-top border border-bottom-0" alt="Shirt Image"
+                                width="100px" height="100px">
+                            <h6 class="card-text text-white bg-secondary">4.1 <span class="text-warning">★</span> |
+                                5.8K
+                            </h6>
+                            <div class="p-1">
+                                <h6> {{user.id}} <span class="text-secondary fw-semibold">-{{user.colour}}</span></h6>
+                                <h6 class="text-secondary">{{user.name}}</h6>
+                                <h6> ₹{{user.price}} <s>₹ 3000</s></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br>

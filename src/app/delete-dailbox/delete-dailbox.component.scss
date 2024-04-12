@@ -1,0 +1,28 @@
+
+/* Style for the title */
+h2 {
+  color: #333; /* Change the color as needed */
+  font-size: 24px; /* Adjust the font size as needed */
+  margin-bottom: 10px; /* Add margin at the bottom */
+}
+
+/* Style for the content */
+p {
+  color: #666; /* Change the color as needed */
+  font-size: 16px; /* Adjust the font size as needed */
+  margin-bottom: 20px; /* Add margin at the bottom */
+}
+
+/* Style for the  buttons */
+button {
+  background-color: #007bff; /* Change the background color as needed */
+  color: #fff; /* Change the text color as needed */
+  border: none; /* Remove the border */
+  padding: 8px 16px; /* Adjust the padding as needed */
+  border-radius: 4px; /* Add border radius for rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+button:hover {
+  background-color: #e34040; /* Change the background color on hover */
+}
