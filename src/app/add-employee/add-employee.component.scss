@@ -1,0 +1,64 @@
+h2{
+    color: green;
+}
+.employee{
+    margin-top: -50px;
+}
+.text-danger
+{
+    font-size: 15px;
+}
+
+label{
+font-weight: bold;
+}
+#submit
+{
+width: 10%; 
+background-color: green;
+}
+.success-message {
+    margin-left: 36%;
+}
+@media only screen and (max-width:600px)
+{
+    #submit
+    {
+        width: auto;
+    }
+    .employee
+    {
+        width: 50%;
+        margin-left: 80%;
+    }  
+    label
+    {
+        margin-left: 0;
+    } 
+}
+@media only screen and  (min-width:700px) and (max-width:1100px) 
+{
+    #submit
+    {
+        width: auto;
+        font-size: 30px;
+        padding: 10px;
+    }
+    .form-control
+    {
+        margin-left: 30px;
+    }
+    form
+    {
+        width: 100%;
+        font-size: 30px;
+    }
+    h2
+    {
+        font-size: 40px;
+    }
+    label
+    {
+        font-size: 25px;
+    }
+}

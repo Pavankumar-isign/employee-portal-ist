@@ -1,0 +1,18 @@
+.circular-button {
+
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  color: green;
+  border: 3px solid green;
+  outline: none;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease; /* Add smooth transition for hover effect */
+}
+
+.circular-button:hover {
+  background-color:black ;/* Change to your desired hover color */
+  color :white;
+  border: none;
+}

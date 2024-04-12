@@ -1,0 +1,15 @@
+<div>
+  <div *ngIf="dataservice.login">
+    <!-- <app-button/> -->
+    <!-- <app-carousel /> -->
+    <app-employee-list-carousel/>
+    <!-- <app-sf-udhay/> -->
+    <div class="container">
+      <app-sf-comp />
+      <app-filter-checkbox />
+    </div>
+  </div>
+  <div *ngIf="!dataservice.login">
+    <router-outlet />
+  </div>
+</div>

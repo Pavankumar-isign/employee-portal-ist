@@ -1,0 +1,17 @@
+
+<h2 mat-dialog-title> Update RECORD</h2>
+<mat-dialog-content>
+  <label for="ids">Choose a EmployeeId :</label>
+<select class="p-3 m-2 w-100" id="ids" name="ids" [(ngModel)]="selectedEmployeeId">
+  <option *ngFor = "let id of data.ids" [value]="id"  de > {{ id }} </option>
+</select>
+<p>You selected: {{ selectedEmployeeId }}</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end" >
+  <button mat-button   (click)="openEmployeeDetailsConfirm(selectedEmployeeId)"  class="m-3"  > ok </button> 
+  <button mat-button   class="btn btn-dark m-3"> Close </button>
+</mat-dialog-actions> 
+
+
+
+ 

@@ -1,0 +1,25 @@
+
+
+<!-- //buttons  -->
+
+
+
+<div class="container justify-content-center align-item-center">
+  <div class=" p-2"  *ngIf="isContentRoute">
+    <button class="btn btn-danger p-3 m-2 "  (click)="openDialogExit()"  >  Back   </button>
+  </div>
+<h1 class=" text-success m-2 text-center justify-content-center align-item-center "  *ngIf="!isContentRoute">  Welcome to Admin space  </h1> <br> <br>
+<div class="d-flex  justify-content-center text-center m-5 p-5"  *ngIf="!isContentRoute">
+  <div  class="text-center p-3 m-5 " id="butn" *ngIf="!isContentRoute" >
+    <button class=" circular-button m-3 p-3"  routerLink="/add-employee" > Add Employee</button>
+    <button class=" circular-button m-3 p-3"   routerLink="/app-employee-list"  > View Employee </button>
+    <button class=" circular-button m-3 p-3"     (click)="openDialogUpdate()"  > Update Employee</button>
+    <button class=" circular-button m-3 p-3"  routerLink="/app-delete-form" >  Delete employee  </button>
+    <button class=" circular-button m-3 p-3"  routerLink="/task-form" >  Task employee  </button>
+  </div>
+</div> 
+</div>
+    
+
+ 
+ 

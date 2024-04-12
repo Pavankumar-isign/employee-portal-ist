@@ -1,0 +1,18 @@
+
+
+
+<!-- Delete form -->
+
+<form  (ngSubmit)="openDialog()"   class="d-flex flex-column  col-sm-9 form-group" >
+  <label for="ids">Choose a EmployeeId :</label>
+  <select class="p-3 m-2 w-100" id="ids" name="ids" [(ngModel)]="selectedEmployeeId" >
+    <option *ngFor = "let id of ids" [value]="id"  de > {{ id }} </option>
+  </select>  
+  <button type="submit" class="btn btn-danger w-25 align-self-center" >  Delete </button>
+  <br> <br>
+  </form>
+  
+  
+  
+  
+  

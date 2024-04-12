@@ -1,0 +1,85 @@
+.cards{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline-start: 28px;
+  margin-inline-end: 28px;
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
+}
+.cd{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.cards::-webkit-scrollbar {
+  display: none;
+  
+}
+
+// .prev {
+//   background-color: transparent;
+//   width: 50px;
+//   position:sticky;
+//   left: 0;
+//   border: none;
+//   cursor: pointer;
+//    font-size: 80px;
+//    z-index: 1;
+// }
+
+// .next{
+//   background-color: transparent;
+//   border: none;
+//   width: 50px;
+//  position:sticky;
+//   right: 0;
+//  cursor: pointer;
+//   font-size: 80px;
+//   z-index: 1;
+// }
+
+
+.carousel-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 130px;
+  height: 150px;
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 25px;
+ }
+
+
+.cardd {
+  border: 1px solid #ddd;
+  width: 93%;
+  height: 80%;
+  border-radius: 8px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  background-color: #fff;
+}
+
+.cardd:hover {
+  transform: scale(1.05);
+}
+
+.prev, .next {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.prev:hover, .next:hover {
+  color: #333;
+}

@@ -1,0 +1,288 @@
+@media screen and (max-width: 768px) {
+    .col-sm-12 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .col-sm-6 {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+#radius-1 {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: lightcoral;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #ffffff;
+    padding: 30px;
+    width: 450px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    button {
+        align-self: flex-end;
+    }
+
+    .flex-column>label {
+        color: #151717;
+        font-weight: 600;
+    }
+
+    .inputForm {
+        border: 1.5px solid #ecedec;
+        border-radius: 10px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        transition: 0.2s ease-in-out;
+
+        input {
+            margin-left: 10px;
+            border-radius: 10px;
+            border: none;
+            width: 85%;
+            height: 100%;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &:focus-within {
+            border: 1.5px solid #2d79f3;
+        }
+    }
+
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        justify-content: space-between;
+
+        div>label {
+            font-size: 14px;
+            color: black;
+            font-weight: 400;
+        }
+
+        .span {
+            font-size: 14px;
+            margin-left: 5px;
+            color: #2d79f3;
+            font-weight: 500;
+            cursor: pointer;
+        }
+    }
+
+
+    .btn-53,
+    .btn-53 *,
+    .btn-53 :after,
+    .btn-53 :before,
+    .btn-53:after,
+    .btn-53:before {
+        border: 0 solid;
+        box-sizing: border-box;
+    }
+
+    .btn-53 {
+        -webkit-tap-highlight-color: transparent;
+        // -webkit-appearance: button;
+        background-color: #75c832;
+        background-image: none;
+        cursor: pointer;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+            Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+            Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+        margin: 10px 0 10px 0;
+        width: 100%;
+        height: 50px;
+        // -webkit-mask-image: -webkit-radial-gradient(#75c832, #424242);
+        padding: 0;
+
+        box-sizing: border-box;
+        padding: 0.5rem 3rem;
+
+        .original {
+            background: #424242;
+            inset: 0;
+            place-content: center;
+            transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+        }
+
+        svg {
+            display: block;
+            // vertical-align: middle;
+        }
+
+        &:hover .original {
+            transform: translatex(100%);
+        }
+
+        span {
+            opacity: 0;
+            transform: translateY(-15px);
+            transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.2s;
+
+            &:nth-child(2n) {
+                transform: translateY(15px);
+            }
+        }
+
+        &:hover span {
+            opacity: 1;
+            transform: translateY(0);
+
+            &:nth-child(2) {
+                transition-delay: 0.1s;
+            }
+
+            &:nth-child(3) {
+                transition-delay: 0.2s;
+            }
+
+            &:nth-child(4) {
+                transition-delay: 0.3s;
+            }
+
+            &:nth-child(5) {
+                transition-delay: 0.4s;
+            }
+
+            &:nth-child(6) {
+                transition-delay: 0.5s;
+            }
+        }
+    }
+
+    .p {
+        text-align: center;
+        color: black;
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    .btn {
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        gap: 10px;
+        border: 1px solid #ededef;
+        background-color: white;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+            border: 1px solid #2d79f3;
+        }
+    }
+}
+
+.product {
+    width: 25%;
+    text-align: center;
+}
+
+.card {
+    padding: 1rem 1rem;
+    border-radius: 1.25rem;
+    background-color: #272443;
+}
+
+.loader {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 30px;
+    padding: 10px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 8px;
+}
+
+.words {
+    overflow: hidden;
+    position: relative;
+}
+
+.words::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(var(--bg-color) 10%,
+            transparent 30%,
+            transparent 70%,
+            var(--bg-color) 90%);
+    z-index: 20;
+}
+
+.word {
+    display: block;
+    height: 100%;
+    padding-left: 6px;
+    color: #956afa;
+    animation: spin_4991 8s infinite;
+}
+
+@keyframes spin_4991 {
+    10% {
+        -webkit-transform: translateY(-102%);
+        transform: translateY(-102%);
+    }
+
+    25% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+
+    35% {
+        -webkit-transform: translateY(-202%);
+        transform: translateY(-202%);
+    }
+
+    50% {
+        -webkit-transform: translateY(-200%);
+        transform: translateY(-200%);
+    }
+
+    60% {
+        -webkit-transform: translateY(-302%);
+        transform: translateY(-302%);
+    }
+
+    75% {
+        -webkit-transform: translateY(-300%);
+        transform: translateY(-300%);
+    }
+
+    85% {
+        -webkit-transform: translateY(-402%);
+        transform: translateY(-402%);
+    }
+
+    100% {
+        -webkit-transform: translateY(-400%);
+        transform: translateY(-400%);
+    }
+}

@@ -1,0 +1,45 @@
+<div class="container">
+  <p class="h2 heading position-relative">Add Task to Employee</p>
+  <div class=" task-form col-sm-10 d-flex position-relative">
+    <!-- Form  -->
+    <form (ngSubmit)="submitForm()" #form="ngForm" class="col-sm-8 form">
+
+      <!-- Employeeid Input -->
+      <div class="form-group col-sm-12 m-2 d-flex">
+        <label class="form-label col-sm-4">Employee Id: <span ><sup class="text-danger">*(required)</sup></span></label>
+        <mat-select class="form-control col-sm-4"  name="employeeId" [(ngModel)]="formData.employeeId" (click)="fetchDataFromBackend()">
+          <mat-option *ngFor="let employee of employeesData" [value]="employee.employeeId">
+            {{ employee.employeeId}}
+          </mat-option>
+        </mat-select>
+      </div>
+      
+      <!--  additionalMessage -->
+      <div class="form-group col-sm-12 m-2">
+        <label for="additionalMessage" class="col-sm-4"> Additional Information: </label>
+        <textarea id="additionalMessage" name="additionalMessage" [(ngModel)]="formData.additionalMessage" rows="3"
+          placeholder="Enter message"></textarea>
+      </div>
+
+      <!-- fileConten -->
+      <div class="form-group col-sm-12 m-2 d-flex">
+        <label for="file" class="col-sm-4">Upload file:<span ><sup class="text-danger">*(required)</sup></span></label>
+        <input type="file" id="file" name="file" (change)="onFileSelected($event)"  #fileInput accept=".pdf, .docx, .jpeg, .png" >
+  
+      </div>
+
+      <!-- conditionalMessage -->
+      <div class="form-group col-sm-12 m-2">
+        <label for="conditionalMessage" class="col-sm-4">Condition for Task: </label>
+        <input type="text" id="conditionalMessage" name="conditionalMessage" class="condition"
+          [(ngModel)]="formData.conditionalMessage" placeholder="Any conditon about task">
+      </div>
+      <button type="submit" class=" btn btn-success">Submit</button>
+      <!-- Sucessmessege -->
+  
+      <div *ngIf="successMessage" class="success-message text-success p-3">{{ successMessage }}</div>
+      <div *ngIf="failureMessage" class="success-message text-danger p-3">{{ failureMessage }}</div>
+
+    </form>
+
+  </div>

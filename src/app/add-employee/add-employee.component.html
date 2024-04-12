@@ -1,0 +1,51 @@
+<div class="container  d-flex justify-content-center col-sm-12">
+	<form #employeeForm="ngForm" (ngSubmit)="onSubmit()" class="d-flex flex-column  col-sm-9 form-group">
+	    <h2 class="align-self-center"> Fill the Employee Details</h2>
+		<h2 class="align-self-center"><span class="text-danger">*</span> indicates fields are mandatory</h2>
+		<label class="m-3" for="firstName">First Name :<sup class="text-danger">*</sup></label>
+		<input required type="text" #fname="ngModel" id="firstName" name="firstName" [(ngModel)]="formData.firstName"
+			ngModel class=" form-control employee border border-dark align-self-center w-50">
+		<label class="m-3" for="lastName">Last Name :<sup class="text-danger">*</sup></label>
+		<input required type="text" #lname="ngModel" name="lastName" [(ngModel)]="formData.lastName" id="lastName"
+			class="form-control employee border border-dark align-self-center  w-50 ">
+		<label class="m-3" for="mobileNumber">Mobile Number :<sup class="text-danger">*</sup></label>
+		<input required type="number" #mobile="ngModel" name="mobileNumber" id="mobileNumber"
+			[(ngModel)]="formData.mobileNumber" class="form-control employee border border-dark align-self-center w-50">
+		<label class="m-3" for="email">E-mail :<sup class="text-danger">*</sup></label>
+		<input required type="email" #email="ngModel" name="email" id="email" [(ngModel)]="formData.email"
+			class="form-control employee border border-dark align-self-center w-50">
+		<div *ngIf="errorMessage" class="align-self-center text-danger">{{ errorMessage }}</div>
+		<div *ngIf="employeeForm.submitted" class="align-self-center">
+			<div *ngIf="formData.email && !formData.email.includes('@isigntech.com')"
+				class="align-self-center text-danger">
+				Email must belong to isigntech.com domain
+			</div>
+		</div>
+		<label class="m-3" for="password">password :<sup class="text-danger">*</sup></label>
+		<input required type="password" #password="ngModel" name="password" [(ngModel)]="formData.password"
+			id="password" class="form-control employee border border-dark align-self-center w-50">
+		<label class="m-3" for="designation">Designation :<sup class="text-danger">*</sup></label>
+		<input required type="text" #designation="ngModel" name="designation" id="job"
+			[(ngModel)]="formData.designation" class="form-control employee border border-dark align-self-center w-50">
+		<label class="m-3" for="salary">Salary :<sup class="text-danger">*</sup></label>
+		<input required type="text" #salary="ngModel" name="salary" id="salary" [(ngModel)]="formData.salary"
+			class="form-control employee border border-dark align-self-center w-50">
+		<label class="m-3" for="adderess">Address :<sup class="text-danger">*</sup></label>
+		<input required type="text" #address="ngModel" name="address" id="address" [(ngModel)]="formData.address"
+			class="form-control employee border border-dark align-self-center w-50">
+		<label class="m-3" for="Date-Of-Birth">Date-Of-Birth :<sup class="text-danger">*</sup></label>
+		<input required type="date" #dob="ngModel" id="dob" name="dob" [(ngModel)]="formData.dOB" ngModel
+			class="form-control employee border border-dark align-self-center w-50">
+		<label class="m-3" for="dOJ">Date-Of-Joining :<sup class="text-danger">*</sup></label>
+		<input required type="date" #doj="ngModel" id="dOJ" name="dOJ" [(ngModel)]="formData.dOJ"
+			class="form-control employee border border-dark align-self-center w-50">
+		<label class="m-3" for="image">Image :<sup class="text-danger">*</sup></label>
+		<input required type="file" id="image" name="image" (change)="onFileSelected($event)" accept="image/*"
+			class="form-control employee border border-dark align-self-center w-50">
+		<div *ngIf="employeeForm.submitted && employeeForm.invalid" class="align-self-center">
+			<div *ngIf="employeeForm.invalid" class=" text-danger">Enter missing details</div>
+		</div>
+		<div *ngIf="successMessage" class="success-message text-success p-3">{{ successMessage }}</div>
+		<button type="submit" id="submit" class="align-self-center text-white rounded-2 m-2">Submit</button>
+	</form>
+</div>

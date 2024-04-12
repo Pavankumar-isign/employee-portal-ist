@@ -1,0 +1,23 @@
+<div class="container  ">
+    <h1 class="text-center"><u>Sorting</u></h1>
+        <div class="col-sm-12 m-3 ">
+            <input type="text"  placeholder="Search for brands & Price" (keyup)="filterData($event.target.value)">
+            <span class="text-danger h5 mx-5">SortBy: </span>
+            <button (click)="sortByasc('name')" class=" m-1 btn btn-primary" type="button">Name A-Z</button>
+            <button (click)="sortByasc('price')" class=" m-1 btn btn-danger" type="button">Price low-high</button>
+    
+            <button (click)="sortBydesc('name')" class=" m-1 btn btn-primary" type="button">Name Z-A</button>
+            <button (click)="sortBydesc('price')" class=" m-1 btn btn-danger" type="button">Price high-low</button>
+        </div>
+    
+            <div class="col-sm-12 m-3 border border-dark d-flex flex-wrap">
+                <div class="text-center border border-dark m-2" *ngFor="let item of filteredData" >
+    
+                    <img src="{{item.image}}">
+                    <h6>{{item.name}}</h6>
+                    <p>{{item.color}}</p>
+                    <h6>{{item.price}}</h6>
+                </div>
+            </div>
+    
+    </div>

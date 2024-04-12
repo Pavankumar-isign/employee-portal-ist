@@ -1,0 +1,57 @@
+<div class="d-flex container down bg-secondary">
+    <!-- Checkbox filters -->
+    <div class=" col-sm-2 ">
+      <div class=" ">
+        <h5>Colour:</h5>
+        <div *ngFor="let color of getUniqueColors()">
+          <input type="checkbox" [(ngModel)]="selectedColors[color]" (change)="filterItems()" />
+          <label>{{ color }}</label>
+        </div>
+      </div>
+      <div class="">
+        <h5>Name:</h5>
+        <div *ngFor="let name of getUniqueNames()">
+          <input type="checkbox" [(ngModel)]="selectedNames[name]" (change)="filterItems()" />
+          <label>{{ name }}</label>
+        </div>
+      </div>
+      <div class="">
+        <h5>Price:</h5>
+        <div *ngFor="let priceRange of priceRanges">
+          <input type="checkbox" [(ngModel)]="selectedPrices[priceRange]" (change)="filterItems()" />
+          <label>{{ priceRange }}</label>
+        </div>
+      </div>
+    </div>
+ 
+  <div class="container ">
+    <div class="row ">
+      <div class="col-md-12 text-right mb-3 ">
+        <select class="form-control" [(ngModel)]="sortBy" (change)="sortItems()">
+          <option value="id">Sort by ID</option>
+          <option value="priceAsc">Sort by Price (Low to High)</option>
+          <option value="priceDesc">Sort by Price (High to Low)</option>
+          <option value="nameAsc">Sort by Name (A-Z)</option>
+          <option value="nameDesc">Sort by Name (Z-A)</option>
+        </select>
+      </div>
+    </div>
+      <!-- Product cards -->
+      
+      <div class="row lg-3 ">
+        <div class="col-md-3 " *ngFor="let user of filteredItems">
+          <!-- Product card -->
+          <div class="card text-center">
+            <div class="card-body">
+              <p><img [src]="user.image" width="30%" height="30%" /></p>
+              <p>ID: {{ user.id }}</p>
+              <p>Name: {{ user.name }}</p>
+              <p>Colour: {{ user.colour }}</p>
+              <p>Price: {{ user.price }}</p>
+            </div>
+          </div>
+        </div>
+       </div>
+    </div>
+  </div>
+ 

@@ -1,0 +1,21 @@
+{
+  "routes": [
+    "/add-employee",
+    "/app-admin-home",
+    "/app-delete-form",
+    "/app-employee-list",
+    "/app-employee-tasks",
+    "/app-filter-checkbox",
+    "/app-login-form",
+    "/app-main",
+    "/app-sf-comp",
+    "/app-sf-udhay",
+    "/app-sort-filter-pavan",
+    "/app-sort-filter-rohit",
+    "/app-sort-search-shubam",
+    "/app-sprint-table",
+    "/app-story-board",
+    "/app-task-form",
+    "/task-form"
+  ]
+}

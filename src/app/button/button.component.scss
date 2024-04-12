@@ -1,0 +1,29 @@
+.btn {
+    transition: all 0.3s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.05); /* Zoom in effect */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    }
+  }
+  
+  .btn-primary:hover {
+    background-color: #007bff; /* Change background color on hover for primary button */
+  }
+  
+  .btn-secondary:hover {
+    background-color: #6c757d; /* Change background color on hover for secondary button */
+  }
+  
+  .btn-success:hover {
+    background-color: #28a745; /* Change background color on hover for success button */
+  }
+  
+  .btn-danger:hover {
+    background-color: #dc3545; /* Change background color on hover for danger button */
+  }
+  
+  .btn-warning:hover {
+    background-color: #ffc107; /* Change background color on hover for warning button */
+  }
+  
